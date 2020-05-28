@@ -1,0 +1,6 @@
+INFO:root:sj.txt opened
+INFO:root:Division in process
+INFO:root:sj.txt closed
+INFO:root:sj.txt opened
+ERROR:root:Attempt to divide by 0
+INFO:root:sj.txt closed

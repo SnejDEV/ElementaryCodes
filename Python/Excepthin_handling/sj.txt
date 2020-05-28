@@ -1,0 +1,4 @@
+https://www.youtube.com/watch?v=0NAASclUm4k&list=PLmdFyQYShrjfPLdHQxuNWvh2ct666Na3z
+https://programminghistorian.org/en/lessons/creating-apis-with-python-and-flask#what-is-an-api
+google interview
+https://www.youtube.com/watch?v=Uh2ebFW8OYM&list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU&index=25
