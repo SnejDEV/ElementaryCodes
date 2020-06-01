@@ -9,6 +9,3 @@ def SS(array):
                array[pos]=array[x]-array[pos]
                array[x]=array[x]-array[pos]
      return(array)
-               
-                    
-          
