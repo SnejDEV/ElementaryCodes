@@ -1,0 +1,13 @@
+def IS(a):                #InsertionSort
+     for x in range(0,len(a)):
+          if(a[x]<=a[0]):
+               temp = a[x]
+               del a[x]
+               a.insert(0,temp)
+          elif(a[x-1]>a[x]):
+               for y in range(x-1,0,-1):
+                    if(a[y-1]<=a[x] and a[y]>a[x]):
+                         temp = a[x]
+                         del a[x]
+                         a.insert(y,temp)
+     return(a)
