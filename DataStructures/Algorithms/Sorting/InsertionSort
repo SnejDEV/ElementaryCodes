@@ -1,13 +1,15 @@
-def IS(a):                #InsertionSort
+def IS(a):
      for x in range(0,len(a)):
-          if(a[x]<=a[0]):
-               temp = a[x]
-               del a[x]
-               a.insert(0,temp)
-          elif(a[x-1]>a[x]):
+          if(a[x]<a[0]):
+               a=change(a,x,0)
+          elif(a[x]<a[x-1]):
                for y in range(x-1,0,-1):
-                    if(a[y-1]<=a[x] and a[y]>a[x]):
-                         temp = a[x]
-                         del a[x]
-                         a.insert(y,temp)
+                    if(a[y]>=a[x] and a[y-1]<=a[x]):
+                         a=change(a,x,y)
+     return(a)
+
+def change(a,x,y):
+     temp = a[x]
+     del a[x]
+     a.insert(y,temp)
      return(a)
