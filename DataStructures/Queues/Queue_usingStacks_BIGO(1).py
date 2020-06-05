@@ -4,7 +4,7 @@ class Node:
           self.next =  None
           self.prev = None
 
-class ST:
+class ST:                     #stack class
      def __init__(self):
           self.head = None
           self.tail = None
@@ -15,7 +15,6 @@ class ST:
           if(self.length==0):
                self.head = node
                self.tail = node
-               self.tail.prev = self.head
           else:
                self.head.prev = node
                node.next = self.head
