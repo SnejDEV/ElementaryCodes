@@ -67,18 +67,3 @@ class Queue:
 
      def peek(self):
           return(self.stack2.head.value)
-          
-                    
-
-
-
-
-
-
-
-
-
-
-
-
-     
