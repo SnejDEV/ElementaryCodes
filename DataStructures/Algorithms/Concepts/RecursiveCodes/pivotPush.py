@@ -6,7 +6,6 @@ def swap(n,k,a):
     return(a)
 
 def lpivot(a):
-    l = len(a)-1
     p=len(a)-1
     x=0
     while(x!=p):
