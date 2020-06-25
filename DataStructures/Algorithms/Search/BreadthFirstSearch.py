@@ -8,6 +8,7 @@ class Node:
 class BST():
      def __init__(self):
           self.root = None
+          self.l =  None
 
      def insert(self,value):
           node = Node(value)
@@ -89,14 +90,15 @@ class BST():
                     
           return(False)
 
-l = []
-def BFS(a):
-    global l
-    if(a==None):
-        return(None)
-    else:
-        l.append(a.value)
-    BFS(a.left)
-    BFS(a.right)
-
-print(l)
+     def traverse(self):
+           self.l=[]
+           def BFS(a):
+                if(a==None):
+                     return(None)
+                else:
+                     self.l.append(a.value)
+                BFS(a.left)
+                BFS(a.right)
+                         
+           BFS(self.root)
+           print(self.l)
