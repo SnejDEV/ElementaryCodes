@@ -1,4 +1,4 @@
-class Hash:
+class Hashtable:
      def __init__(self,size):
           self.a=[None]*size
 
@@ -12,16 +12,18 @@ class Hash:
           return hashC
 
      def set(self,key,val):
-          address = self.__hash(key)
+          address = self.__hash(str(key))
           if(self.a[address]==None):
                self.a[address] = []
           self.a[address].append([key,val])                      #storing data buckets at hash addresses
                
      def get(self,key):
-          address = self.__hash(key)
+          address = self.__hash(str(key))
+          l=[]
           for x in self.a[address]:
                if(x[0]==key):
-                    return x[1]
+                    l.append(x[1])
+          return(l)
 
      def keys(self):
           keys_ = []
@@ -42,10 +44,10 @@ class Hash:
                     values_.append(x[0][1])
                if(leng>1):
                     for y in range(1,leng):
-                         keys_.append(x[y][1])     
+                         values_.append(x[y][1])     
           return values_
 
      def delete(self,key):
           address = self.__hash(key)
           self.a[address] = None
-          
+
