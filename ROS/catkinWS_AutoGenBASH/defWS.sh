@@ -10,3 +10,4 @@ echo
 echo
 echo
 echo "cd into src and create your ros package using the command catkin_create_pkg <pkg name> <dependencies>"
+echo "cd back into the workspace main directory and compile using the command catkin_make"
