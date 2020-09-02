@@ -25,12 +25,15 @@ if __name__ == "__main__":
             pass
 '''
 #!/usr/bin/python3
-import rospy,time
+import rospy,time,sys
 from geometry_msgs.msg import Twist
 
 def msg():
-    twist.linear.x = float(input("Linear x: "))
-    twist.angular.z = float(input("Angular z: "))
+    try:    
+        twist.linear.x = float(input("Linear x: "))
+        twist.angular.z = float(input("Angular z: "))
+    except:
+        sys.exit("Program Execution Terminated")
 
 def pubInit():
     global pub
@@ -41,6 +44,7 @@ if __name__=="__main__":
     global twist 
     twist = Twist()
     pubInit()
+    print("Invalid inputs terminates code execution")
     while not(rospy.is_shutdown()):
         msg()
         try:
