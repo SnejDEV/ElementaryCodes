@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import rospy
+'''import rospy
 from geometry_msgs.msg import Twist
 
 def talker(pub,twist):
@@ -23,3 +23,28 @@ if __name__ == "__main__":
             talker(pub,twist)
         except rospy.ROSInterruptException:
             pass
+'''
+#!/usr/bin/python3
+import rospy,time
+from geometry_msgs.msg import Twist
+
+def msg():
+    twist.linear.x = float(input("Linear x: "))
+    twist.angular.z = float(input("Angular z: "))
+
+def pubInit():
+    global pub
+    rospy.init_node("talk",anonymous=True)
+    pub = rospy.Publisher("/turtle1/cmd_vel",Twist,queue_size=10)
+
+if __name__=="__main__":
+    global twist 
+    twist = Twist()
+    pubInit()
+    while not(rospy.is_shutdown()):
+        msg()
+        try:
+            pub.publish(twist)
+        except rospy.ROSInterruptException:
+            pass
+        time.sleep(5)
